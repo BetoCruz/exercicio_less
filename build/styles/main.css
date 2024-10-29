@@ -10,6 +10,12 @@ body {
 li {
   list-style: none;
 }
+a {
+  font-family: Shrikhand;
+}
+p {
+  font-family: Roboto Mono;
+}
 .container {
   max-width: 1024px;
   width: 100%;
@@ -25,6 +31,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
+  font-family: Shrikhand;
 }
 header .container {
   display: flex;
@@ -45,6 +52,9 @@ header .menu li a {
 }
 section {
   padding: 56px 0;
+}
+section h2 {
+  font-family: Shrikhand;
 }
 section .products {
   margin-top: 40px;
@@ -84,4 +94,53 @@ section .product-button {
 }
 section .product-button:hover {
   background-color: #4cd137;
+}
+.container-form {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f5f6fa;
+  display: flex;
+}
+.container-form form {
+  display: flex;
+  flex-direction: column;
+  background-color: #8aa3bd;
+  max-width: 350px;
+  width: 100%;
+  padding: 16px;
+  margin: 5px;
+  border-radius: 10px;
+}
+.container-form form h2 {
+  font-family: Shrikhand;
+}
+.container-form form label {
+  font-family: Roboto Mono;
+}
+.container-form .social-medias ul {
+  display: flex;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .container-form .social-medias ul {
+    display: block;
+  }
+}
+.container-form .social-medias ul li {
+  margin-right: 32px;
+}
+.container-form .social-medias ul li a img {
+  transition: all ease 0.5s;
+}
+.container-form .social-medias ul li a img:hover {
+  transform: scale(3);
+}
+footer {
+  background-color: #182C61;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }

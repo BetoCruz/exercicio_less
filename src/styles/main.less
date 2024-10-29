@@ -9,12 +9,19 @@
 
 body {
     background-color: @backgroundColor;
+    
 }
 
 li {
     list-style: none;
 }
 
+a{
+    font-family: #fonts[fontForm];
+}
+p{
+    font-family: #fonts[fontRoboto];
+}
 .container {
     max-width: 1024px;
     width: 100%;
@@ -22,8 +29,7 @@ li {
 
     @media  @breakpointTablet {
         max-width: 80%;
-    }
-    
+    }    
 }
 
 
@@ -32,6 +38,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
+    font-family: #fonts[fontForm];
 
     & .container {
         display: flex;
@@ -52,20 +59,15 @@ header {
             color:#colors[textColor];
             text-decoration: none;
         }
-    }  
-
+    }
 }
-
-
-
-
-
-
-
-
 
 section {
     padding: 56px 0;
+
+    h2{
+        font-family: #fonts[fontForm];
+    }
 
     .products {
         margin-top: 40px;
@@ -87,8 +89,7 @@ section {
                 margin-bottom: 32px;
             }
         }        
-    }   
-
+    }
 
     .product-item img {
         width: 100%;
@@ -109,4 +110,65 @@ section {
             background-color: #colors[buttonHoverColor];
         }
     }
+}
+
+
+.container-form {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #colors[backgroundColor];
+    display: flex;
+
+    form{
+        
+        display:flex;
+        flex-direction: column;
+        background-color: #8aa3bd;
+        max-width: 350px;
+        width: 100%;
+        padding: 16px;
+        margin: 5px;
+        border-radius: 10px;
+
+        h2{
+            font-family:#fonts[fontForm];
+        }
+        label{
+            font-family:#fonts[fontRoboto];
+        }
+    }
+    
+    .social-medias  ul {
+        display: flex;
+        margin-left: 100px;
+        margin-top: 30px;    
+        
+        @media @breakpointMobile {            
+            display: block;            
+        }
+
+        & li {            
+            margin-right: 32px;      
+        }
+
+       
+        & li a img {
+            transition: all ease .5s;
+
+            &:hover {
+                transform: scale(3);
+            }
+        }
+    }
+}
+
+
+
+footer{
+    background-color: #colors[backgroundColorHeader];
+    color: #colors[textColor];
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
